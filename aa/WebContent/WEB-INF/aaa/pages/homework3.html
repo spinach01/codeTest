@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>미미박스 지원자 오윤경</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <link href="../dist/css/skins/skin-red.css" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body class="skin-red sidebar-mini">
+    <div class="wrapper">
+    <!--header 영역 시작-->
+      <header class="main-header">
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+          <span class="logo-mini"><b>미미박스</b></span>
+          <span class="logo-lg"><b>미미박스</b></span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+        </nav>
+      </header>
+    <!--header 영역 끝-->
+        
+      <!-- =============================================== -->
+      <!-- Left side column. contains the sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- Sidebar user panel -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img src="../tran_img.jpg" width="160px" class="img-circle" alt="오윤경" />
+            </div>
+            <div class="pull-left info">
+              <p>오윤경</p>
+
+              <a href="#"><i class="fa fa-circle text-success"></i> 지원자</a>
+            </div>
+          </div>
+          
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+              
+            <li ><a href="homework1.html">
+                <i class="fa fa-book"></i> 
+                <span>과제1</span></a>
+            </li>
+  
+            <li><a href="homework2.html">
+                <i class="fa fa-book"></i> 
+                <span>과제2</span></a>
+            </li>
+  
+            <li class="active"><a href="homework3.html">
+                <i class="fa fa-book"></i> 
+                <span>과제3</span></a>
+            </li>
+  
+            <li><a href="homework4.html">
+                <i class="fa fa-book"></i> 
+                <span>과제4</span></a>
+            </li>
+  
+            <li><a href="homework5.html">
+                <i class="fa fa-book"></i> 
+                <span>과제5</span></a>
+            </li>
+  
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- =============================================== -->
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            3번 과제
+            <small>by 오윤경</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="../index.html"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Homework</a></li>
+          </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+           <div class="row">
+                <div class="col-md-12">
+                  <div class="box box-primary">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">과제 내용</h3>
+                    </div>
+                    <div class="box-body">
+                        <pre>
+3. 숫자 배열 순서 바꾸기
+
+입력된 숫자 배열을 다음과 같은 형태의 배열로 순서를 변경하라.
+
+[a1, a2, a3..., an, b1, b2, b3..., bn]
+=>
+[a1, b1, a2, b2, a3, b3..., an, bn]
+
+예)
+입력 : 1 4 5 2 4 8
+출력 : 1 2 4 4 5 8</pre>
+                    </div>
+                    <div class="box-footer">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                              <button id="resultBtn" type="button" class="btn btn-primary">Action</button>
+                            </div>
+                            <input id="inputText" type="text" class="form-control" placeholder="숫자를 입력해주세요">
+                        </div>    
+                    </div>
+                  </div><!-- /.box -->
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-md-5">
+                  <div class="box box-primary">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">결과</h3>
+                    </div>
+                    <div id="resultBox" class="box-body" style="height:100px;font-size:30px;">
+                        
+                        
+                    </div>
+                    <div class="box-footer">
+                    </div>
+                  </div><!-- /.box -->
+                </div>
+          
+                
+                <div class="col-md-7">
+                  <div class="box box-primary">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">코드</h3>
+                    </div>
+                    <div class="box-body">
+<pre><xmp>/*버튼 클릭시 실행. input에서 긁어서 코어 reArrange 함수에 넣어준다.*/
+$("#resultBtn").on("click",function(){
+    var inputTextArray = $("#inputText").val().trim().split(" ");
+    $("#resultBox").html(reArrange(inputTextArray).trim());
+})  
+
+/*숫자 배열이 2의 배수고 앞뒤로 정렬하므로 앞에서 하나 중간부터 하나를 붙여준다.
+String 형에 담으면 문자열이 되고 Array 객체에 담으면 원하는 순서의 Array객체를 얻을 수 있다.*/
+function reArrange(inputTextArray){
+    var resultStr = "";
+    for(var i=0;i<inputTextArray.length/2;i++){
+        resultStr = resultStr+inputTextArray[i]+" ";
+        resultStr = resultStr+inputTextArray[i+inputTextArray.length/2]+" ";
+    }
+    return resultStr;
+}
+</xmp>
+</pre>
+                    </div>
+                    <div class="box-footer">
+                    </div>
+                  </div><!-- /.box -->
+                </div>
+            </div>
+            
+        </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+
+      <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          <b>Version</b> 1.0
+        </div>
+        <strong>Copyright &copy; 2015 
+            <a href="https://github.com/spinach01">YunGyeong Oh</a>.
+        </strong> All rights reserved.
+      </footer>
+      
+        
+      <div class="control-sidebar-bg"></div>
+    </div><!-- ./wrapper -->
+
+    <script src="../plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="../plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
+    <script src="../dist/js/app.min.js" type="text/javascript"></script>
+      
+    <script>
+        /*버튼 클릭시 실행. input에서 긁어서 코어 reArrange 함수에 넣어준다.*/
+        $("#resultBtn").on("click",function(){
+            var inputTextArray = $("#inputText").val().trim().split(" ");
+            $("#resultBox").html(reArrange(inputTextArray).trim());
+        })  
+        
+        /*숫자 배열이 2의 배수고 앞뒤로 정렬하므로 앞에서 하나 중간부터 하나를 붙여준다.
+        String 형에 담으면 문자열이 되고 Array 객체에 담으면 원하는 순서의 Array객체를 얻을 수 있다.*/
+        function reArrange(inputTextArray){
+            var resultStr = "";
+            for(var i=0;i<inputTextArray.length/2;i++){
+                resultStr = resultStr+inputTextArray[i]+" ";
+                resultStr = resultStr+inputTextArray[i+inputTextArray.length/2]+" ";
+            }
+            return resultStr;
+        }
+    </script>  
+      
+      
+  </body>
+</html>

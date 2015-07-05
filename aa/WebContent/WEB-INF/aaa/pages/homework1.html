@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>미미박스 지원자 오윤경</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <link href="../dist/css/skins/skin-red.css" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body class="skin-red sidebar-mini">
+    <div class="wrapper">
+    <!--header 영역 시작-->
+      <header class="main-header">
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+          <span class="logo-mini"><b>미미박스</b></span>
+          <span class="logo-lg"><b>미미박스</b></span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+        </nav>
+      </header>
+    <!--header 영역 끝-->
+        
+      <!-- =============================================== -->
+      <!-- Left side column. contains the sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- Sidebar user panel -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img src="../tran_img.jpg" width="160px" class="img-circle" alt="오윤경" />
+            </div>
+            <div class="pull-left info">
+              <p>오윤경</p>
+
+              <a href="#"><i class="fa fa-circle text-success"></i> 지원자</a>
+            </div>
+          </div>
+          
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+              
+            <li class="active"><a href="homework1.html">
+                <i class="fa fa-book"></i> 
+                <span>과제1</span></a>
+            </li>
+  
+            <li><a href="homework2.html">
+                <i class="fa fa-book"></i> 
+                <span>과제2</span></a>
+            </li>
+  
+            <li><a href="homework3.html">
+                <i class="fa fa-book"></i> 
+                <span>과제3</span></a>
+            </li>
+  
+            <li><a href="homework4.html">
+                <i class="fa fa-book"></i> 
+                <span>과제4</span></a>
+            </li>
+  
+            <li><a href="homework5.html">
+                <i class="fa fa-book"></i> 
+                <span>과제5</span></a>
+            </li>
+  
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- =============================================== -->
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            1번 과제
+            <small>by 오윤경</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="../index.html"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Homework</a></li>
+          </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+           <div class="row">
+                <div class="col-md-12">
+                  <div class="box box-primary">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">과제 내용</h3>
+                    </div>
+                    <div class="box-body">
+                        <pre>
+1. 목표숫자에 맞게 연산 하기 
+
+숫자 배열과 목표 숫자가 주어지면, 목표 숫자가 연산 결과로 나올 수 있도록 숫자 배열으로 이용한 연산 수식을 출력하라.
+숫자 배열 사이에 연산자는 덧셈(+) 와 뺄셈(-)만 사용가능하며, 배열의 순서는 변경하지 않는다.
+
+예) 
+입력 : 1 3 4 5, 7        
+1 - 3 + 4 + 5 = 7 이므로 
+출력 : 1 - 3 + 4 + 5
+                        </pre>
+                    </div>
+                    <div class="box-footer">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                              <button id="resultBtn" type="button" class="btn btn-primary">Action</button>
+                            </div>
+                            <input id="inputText" type="text" class="form-control" placeholder="숫자를 입력해주세요">
+                        </div>    
+                    </div>
+                  </div><!-- /.box -->
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-md-5">
+                  <div class="box box-primary">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">결과</h3>
+                    </div>
+                    <div id="resultBox" class="box-body" style="height:100px;font-size:30px;">
+                        
+                        
+                    </div>
+                    <div class="box-footer">
+                    </div>
+                  </div><!-- /.box -->
+                </div>
+          
+                
+                <div class="col-md-7">
+                  <div class="box box-primary">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">코드</h3>
+                    </div>
+                    <div class="box-body">
+<pre><xmp>/*버튼 클릭시 실행. input에서 긁어서 코어 yunsan함수에 넣어준다.*/
+$("#resultBtn").on("click",function(){
+    var inputText = $("#inputText").val().trim().split(",");
+    var inputNumberArray = inputText[0].trim().split(" ");
+    var inputResult = inputText[1].trim();    
+    $("#resultBox").html(yunsan(inputNumberArray,inputResult));
+})    
+
+/*이진수변환 값의 자리 수를 맞춰 주는 함수.*/
+function jariAdjust(jariSu,num){
+    if(num.toString().length<jariSu){
+        var loopNum = jariSu-num.toString().length;
+        for(var i=0;i<loopNum;i++){
+            num="0"+num;
+        }
+    }
+    return num;
+}  
+
+/*약속한 숫자를 부호로 바꿔주는 함수.*/
+function numberToOperator(su){
+    if(su==0){
+        return "+";
+    }else{
+        return "-";
+    }
+}
+
+/*실질적 연산을 하는 함수.
+사용자가 입력한 숫자들의 배열과 결과 값을 입력 받고 필터 결과를 리턴한다.
+중복되지 않고 부호가 가질 수 있는 확률 2^n(부호 수).
+for문의 i값은 중복되지 않기 때문에 2진수로 변환해 부호로 적용.
+-부호가 늘어나면 3진수 4진수.. 이렇게 늘리면 쉽게 적용가능.*/
+function yunsan(inputNumberArray,resultNumber){
+    var jariSu = (Math.pow(2, inputNumberArray.length-1)-1).toString(2).length;
+    var resultStr;
+        for(var i=0;i<Math.pow(2, inputNumberArray.length-1);i++){
+            resultStr=""+inputNumberArray[0];
+            var operatorJinsu = i.toString(2);
+            operatorJinsu=jariAdjust(jariSu,operatorJinsu);
+            for(var j=0;j<operatorJinsu.length;j++){
+                resultStr = resultStr+""+numberToOperator(operatorJinsu[j]);
+                resultStr = resultStr+""+inputNumberArray[j+1];
+            }
+            if(eval(resultStr)==resultNumber){
+                return resultStr;
+            }    
+    }
+    return "결과값을 잘 못 입력하셨습니다."
+}
+</xmp>
+</pre>
+                    </div>
+                    <div class="box-footer">
+                    </div>
+                  </div><!-- /.box -->
+                </div>
+            </div>
+            
+        </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+
+      <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          <b>Version</b> 1.0
+        </div>
+        <strong>Copyright &copy; 2015 
+            <a href="https://github.com/spinach01">YunGyeong Oh</a>.
+        </strong> All rights reserved.
+      </footer>
+      
+        
+      <div class="control-sidebar-bg"></div>
+    </div><!-- ./wrapper -->
+
+    <script src="../plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="../plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
+    <script src="../dist/js/app.min.js" type="text/javascript"></script>
+      
+    <script>
+        
+        /*버튼 클릭시 실행. input에서 긁어서 코어 yunsan함수에 넣어준다.*/
+        $("#resultBtn").on("click",function(){
+            var inputText = $("#inputText").val().trim().split(",");
+            var inputNumberArray = inputText[0].trim().split(" ");
+            var inputResult = inputText[1].trim();    
+            $("#resultBox").html(yunsan(inputNumberArray,inputResult));
+        })    
+        
+        /*이진수변환 값의 자리 수를 맞춰 주는 함수.*/
+        function jariAdjust(jariSu,num){
+            if(num.toString().length<jariSu){
+                var loopNum = jariSu-num.toString().length;
+                for(var i=0;i<loopNum;i++){
+                    num="0"+num;
+                }
+            }
+            return num;
+        }  
+        
+        /*약속한 숫자를 부호로 바꿔주는 함수.*/
+        function numberToOperator(su){
+            if(su==0){
+                return "+";
+            }else{
+                return "-";
+            }
+        }
+        
+        /*실질적 연산을 하는 함수.
+        사용자가 입력한 숫자들의 배열과 결과 값을 입력 받고 필터 결과를 리턴한다.
+        중복되지 않고 부호가 가질 수 있는 확률 2^n(부호 수).
+        for문의 i값은 중복되지 않기 때문에 2진수로 변환해 부호로 적용.
+        -부호가 늘어나면 3진수 4진수.. 이렇게 늘리면 쉽게 적용가능.*/
+        function yunsan(inputNumberArray,resultNumber){
+            var jariSu = (Math.pow(2, inputNumberArray.length-1)-1).toString(2).length;
+            var resultStr;
+                for(var i=0;i<Math.pow(2, inputNumberArray.length-1);i++){
+                    resultStr=""+inputNumberArray[0];
+                    var operatorJinsu = i.toString(2);
+                    operatorJinsu=jariAdjust(jariSu,operatorJinsu);
+                    for(var j=0;j<operatorJinsu.length;j++){
+                        resultStr = resultStr+""+numberToOperator(operatorJinsu[j]);
+                        resultStr = resultStr+""+inputNumberArray[j+1];
+                    }
+                    if(eval(resultStr)==resultNumber){
+                        return resultStr;
+                    }    
+            }
+            return "결과값을 잘 못 입력하셨습니다."
+        }
+    </script>  
+      
+      
+  </body>
+</html>
